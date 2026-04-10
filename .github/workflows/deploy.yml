@@ -10,10 +10,17 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # 1. Checkout your code
-            - name: Checkout code
+            # 1. Checkout Code
+            - name: Checkout Code
               uses: actions/checkout@v3
 
-            # 2. Print Message
+            # 2. Login to Docker Hub
+            - name: Login to Docker Hub
+              uses: docker/login-action@v2
+              with:
+                username: ${{ secrets.DOCKER_USERNAME }}
+                password: ${{ secrets.DOCKER_PASSWORD }}
+
+            # 3. Test step
             - name: Print message
-              run: echo "Code checkout sucessful"
+              run: echo "Docker login successful"

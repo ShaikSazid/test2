@@ -37,8 +37,8 @@ jobs:
                 key: ${{ secrets.EC2_SSH_KEY }}
                 script: |
                   docker pull shaiksazid/my-new-app:latest
-                  docker stop my-app || true
-                  docker rm my-app || true
+                  docker stop my-new-app || true
+                  docker rm my-new-app || true
                   docker run -d -p 80:8080 --name my-new-app shaiksazid/my-new-app:latest
 
             # 5. Print message

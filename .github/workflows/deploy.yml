@@ -23,7 +23,7 @@ jobs:
 
             # 3. Build Docker Image
             - name: Build Docker Image
-              run: docker build -t shaiksazid/my-app:latest .
+              run: docker build -t shaiksazid/my-app:latest ./backend
 
             - name: Push Docker Image
               run: docker push shaiksazid/my-app:latest

@@ -23,7 +23,7 @@ jobs:
 
             # 3. Build Docker Image
             - name: Build Docker Image
-              run: docker run -t shaiksazid/my-app:latest .
+              run: docker build -t shaiksazid/my-app:latest
 
             # 4. Print message
             - name: Print message

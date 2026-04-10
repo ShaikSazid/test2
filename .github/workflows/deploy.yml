@@ -21,6 +21,10 @@ jobs:
                 username: ${{ secrets.DOCKER_USERNAME }}
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
-            # 3. Test step
+            # 3. Build Docker Image
+            - name: Build Docker Image
+              run: docker run -t shaiksazid/my-app:latest .
+
+            # 4. Print message
             - name: Print message
-              run: echo "Docker login successful"
+              run: echo "Docker build successful"

@@ -11,6 +11,10 @@ app.get("/name", (req, res) => {
     res.send("Hey what's your name .. never mind you are a fucking cunt!!");
 })
 
+app.get("/hello", (req, res) => {
+    res.status(200).send("Hello !! How are you ?");
+});
+
 app.listen(port, () => {
     console.log(`Server running on the port ${port}`);
 });
